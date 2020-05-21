@@ -1,0 +1,916 @@
+html {
+  font-size: 30px;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+h1 {
+  line-height: 4rem;
+  font-size: 5rem;
+  text-align: center;
+  font-family: 'Jura', sans-serif;
+  font-weight: 900;
+}
+
+h2 {
+  line-height: 3rem;
+  font-size: 4rem;
+  text-align: center;
+  font-family: 'Jura', sans-serif;
+  font-weight: 500;
+}
+
+h3 {
+  line-height: 3rem;
+  font-size: 3rem;
+  text-align: center;
+  font-family: 'Jura', sans-serif;
+  font-weight: 500;
+}
+
+h4 {
+  line-height: 1rem;
+  font-size: 2rem;
+  text-align: center;
+  padding: 1rem;
+  font-family: 'Jura', sans-serif;
+  font-weight: 400;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+form {
+  width: 80%;
+  margin: 5% auto;
+  line-height: 2rem;
+}
+
+label,
+legend {
+  font-family: 'Jura', sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+input {
+  font-size: 2rem;
+  border: gray solid .01rem;
+}
+
+button,
+input[type="submit"],
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  border: none;
+  background-color: transparent;
+}
+
+header {
+  margin: 2rem;
+}
+
+header:not(#grow-collection-title) {
+  position: sticky;
+  background-color: white;
+  top: 0rem;
+  z-index: 2;
+  margin: 1rem auto;
+  padding: 2rem 1rem;
+}
+
+/*classes that span multiple pages */
+.hidden {
+  display: none !important;
+}
+
+.flex {
+  display: flex;
+}
+
+.page {
+  height: 100vh;
+  width: 100vw;
+}
+
+.back-arrow {
+  float: left;
+  font-size: 3rem;
+  cursor: pointer;
+  position: relative;
+  top: -.2rem;
+}
+
+.delete-button {
+  float: right;
+  cursor: pointer;
+  font-size: 2.5rem
+}
+
+.circle-icon {
+  width: 3rem;
+}
+
+.nutrient-list {
+  font-family: 'Jura', sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.delete-confirm div {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.delete-confirm form {
+  width: 70%;
+  margin: 30% auto;
+}
+
+.delete-confirm h3 {
+  font-weight: 400;
+}
+
+.entry-subheading {
+  padding: 0;
+}
+
+.entry-sub-subheading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: .5rem;
+}
+
+.entry-sub-subheading img{
+  width: 2.5rem;
+  margin: 0 1rem;
+}
+
+.entry-date {
+  padding: 0;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+#title {
+  position: relative;
+  width: 100vw;
+  margin: 0 auto;
+  top: 50%;
+  transform: perspective(1px) translateY(-50%);
+  border-radius: 1rem;
+  color: black;
+}
+
+#title h1 {
+  line-height: 5rem;
+  font-size: 4.5rem;
+}
+
+#title h2 {
+  padding: 0;
+}
+
+#title h3 {
+  color: orange;
+}
+
+#title h4 {
+  line-height: 2rem;
+}
+
+#title .vegetative-phase {
+  width: 4rem;
+}
+
+#cover-page-mobile {
+  width: 100%;
+  border: black solid 1rem;
+  border-left-width: .5rem;
+  border-right-width: .5rem;
+}
+
+#cover-page a {
+  border: .5vw solid orange;
+  display: block;
+  width: 16rem;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: .5rem;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#cover-page a:active {
+  background-color: orange;
+  border-color: orange;
+}
+
+#cover-page a h2 {
+  color: white;
+  padding: 0;
+}
+
+#cover-page a h2 {
+  margin: 1rem;
+}
+
+/* add-first-entry page */
+#grow-collection-page h2 {
+  margin-bottom: 1rem;
+}
+
+#first-entry-page {
+  background-color: black;
+}
+
+#first-entry-page .back-arrow{
+  color: white;
+  padding: 1rem
+}
+
+#first-entry-page a {
+  display: block;
+  padding: 25% 0;
+  cursor: pointer;
+}
+
+#first-entry-page a img {
+  display: block;
+  width: 80vw;
+  margin: 3rem auto;
+  border-radius: .5rem;
+}
+
+#first-entry-page a h2 {
+  color: white;
+}
+
+#first-entry-page a:hover #add-first-entry {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* grow-collection-page */
+#grow-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 4.4vw;
+}
+
+.grow-links,
+#add-a-grow {
+  margin: .5vw .5vw;
+  box-sizing: border-box;
+  width: 90vw;
+  height: 90vw;
+  border-radius: .5rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+ .grow-links {
+  background-color: black;
+}
+
+#add-a-grow {
+  border: .5vw dotted black;
+}
+
+.finished-grow {
+  background-color: darkgray;
+}
+
+.finished-grow:hover {
+    color: darkgray !important;
+}
+
+.finished-grow:active {
+    color: darkgray !important;
+}
+
+.grow-links:link {
+    color: white;
+}
+
+.grow-links:visited {
+    color: white;
+}
+
+.grow-links:hover {
+    color: black;
+}
+
+.grow-links:active {
+    color: black;
+}
+
+#add-a-grow:link {
+    color: black;
+}
+
+#add-a-grow:visited {
+    color: black;
+}
+
+#add-a-grow:hover {
+    color: white;
+}
+
+#add-a-grow:active {
+    color: white;
+}
+
+#grow-timeline {
+  display: flex;
+  width: 100%;
+  padding: 6rem 0;
+}
+
+#left-side {
+  display: flex;
+  flex-grow: 4;
+  position: relative;
+  justify-content: flex-end;
+}
+
+#right-side {
+  flex-grow: 4;
+  position: relative;
+}
+
+#add-entry {
+  padding: .5rem;
+}
+
+#timeline-middle {
+  width: 2rem;
+}
+
+#timeline-line{
+  background-color: black;
+  width: 20%;
+  margin: 0 auto;
+}
+
+#timeline-dot{
+  background-color: black;
+  position: relative;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  margin: 1.5rem auto;
+}
+
+#grow-timeline .timeline-entry {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.timeline-entry h2 {
+  padding: 0;
+}
+
+.timeline-entry img {
+  height: 2rem;
+  width: 2rem;
+}
+
+/* add-grow form page */
+#add-grow-page form div,
+#add-grow-page form fieldset {
+  margin: 1rem;
+}
+
+#add-grow-page header h2 {
+  width: 70%;
+  margin: 0 auto;
+}
+
+#add-grow-page label.strain {
+  font-weight: 500;
+}
+
+#add-grow-page input.strain {
+  width: 1rem;
+  height: 1rem;
+}
+
+input[type="submit"] {
+  float: right;
+  background-color: white;
+  border: .1rem solid orange;
+  border-radius: .25rem;
+  padding: .5rem 0;
+  margin: 2rem;
+  width: 10rem;
+  font-family: 'Jura', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+/* add-entry-page */
+.progress-questions {
+  width: 90vw;
+  margin: 0 auto;
+}
+
+.progress-questions h4 {
+  line-height: 2rem;
+}
+
+.progress-questions .grow-name {
+  color: orange;
+  font-weight: 500;
+}
+
+.progress-questions div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.yes-no {
+  border: .1rem solid orange;
+  border-radius: .25rem;
+  background-color: white;
+  padding: .5rem 0;
+  margin: 2rem;
+  width: 6rem;
+}
+
+.yes-no h4 {
+  font-weight: 600;
+  padding: 0;
+}
+
+.yes-no:active {
+  background-color: orange;
+  border-color: orange;
+}
+
+#water-feed-instruct {
+  width: 90%;
+  margin: 5% auto;
+  font-family: 'Jura', sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+#water-feed-instruct img {
+  height: 10rem;
+  width: 10rem;
+  border: .5rem solid black;
+  border-radius: .5rem;
+  margin: 1.5rem;
+  float: right;
+}
+
+#water-feed-instruct h4 {
+  line-height: 1.5rem;
+  font-size: 1.5rem;
+  text-align: left;
+  font-weight: 500;
+}
+
+#feed-flex {
+  display: flex;
+}
+
+.water-feed-text h3 {
+  text-align: left;
+  padding: 0;
+  font-weight: 400;
+}
+
+.water-feed-text ul {
+  padding: 0 1rem;
+}
+
+#feed-note h4 {
+  display: inline;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+#feed-note ul {
+  margin: 0 auto;
+  width: 90%;
+  font-weight: 400;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+#feed-note > div:first-child {
+  display: flex;
+  justify-content: center;
+}
+
+#feed-note .circle-icon {
+  border-radius: 0rem;
+  margin: .25rem 0rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: none;
+}
+
+#entry-submit {
+  margin: auto;
+  width: 80%;
+}
+
+#add-entry-page textarea {
+  margin: 0 auto;
+  font-size: 2rem;
+  border: solid black .1rem;
+}
+
+#edit-entry {
+  float: right;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#view-entry-page main {
+  padding: 2rem 0;
+}
+
+#view-entry-page main h4 {
+  font-weight: 600;
+}
+
+#view-entry-page .nutrient-list {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#notes-box,
+#notes-box-edit {
+  border: .1rem solid black;
+  width: 60%;
+  margin: 2rem auto;
+  padding: .5rem;
+}
+
+#notes-box {
+  min-height: 4rem;
+}
+
+#notes-box-edit {
+  height: 10rem;
+}
+
+#entry-edit {
+  width: auto;
+  margin: auto;
+}
+
+#exit-edit {
+  float: right;
+  font-size: 1rem;
+}
+
+#edit-notes {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  width: 90%;
+  height: 90%;
+  display: block;
+  margin: auto;
+}
+
+/* no more entries */
+#no-more-entries div{
+  width: 70%;
+  margin: 20% auto;
+}
+
+#no-more-entries h3{
+  font-weight: 300;
+}
+
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+
+  html {
+    font-size: 12px;
+  }
+
+  header {
+    margin: 4rem;
+  }
+
+  h1 {
+    line-height: 6rem;
+    font-size: 6rem;
+  }
+
+  h2 {
+    line-height: 5rem;
+    font-size: 5.5rem;
+  }
+
+  h3 {
+    font-size: 3.5rem;
+  }
+
+  header:not(#grow-collection-title) {
+    padding: 2rem 2rem;
+    margin: 0rem auto;
+  }
+
+  p {
+      font-size: 2rem;
+  }
+
+  input {
+    font-size: 3rem;
+  }
+
+  input[type="submit"] {
+    width: 12rem;
+    margin-right: 15%;
+    font-size: 2.5rem;
+  }
+
+  label,
+  legend {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+
+  legend {
+    margin-bottom: 1rem;
+  }
+
+  .back-arrow,
+  .delete-button {
+    font-size: 5rem
+  }
+
+  #title {
+    color: white;
+  }
+
+  #defaultCanvas0 {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    background-color: white;
+  }
+
+  #title a {
+    margin: 1rem auto;
+    width: 21rem;
+  }
+
+  #title h1 {
+    line-height: 9rem;
+    font-size: 9rem;
+  }
+
+  #title h2 {
+    line-height: 6rem;
+    font-size: 6rem;
+    font-weight: 700;
+    margin: .5rem;
+  }
+
+  #title h3 {
+    color: white;
+  }
+
+  #title h4 {
+    line-height: 2.5rem;
+    font-size: 2.5rem;
+  }
+
+  #title .vegetative-phase {
+    width: 8rem;
+  }
+
+  #grow-grid {
+    margin: 2vw;
+  }
+
+  #grow-collection-page h2 {
+    font-size: 3rem;
+    line-height: 2.5rem
+  }
+
+  #grow-collection-page h3 {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+
+  #grow-collection-page .grow-links,
+   #add-a-grow {
+    margin: .3vw .3vw;
+    box-sizing: border-box;
+    width: 23vw;
+    height: 23vw;
+  }
+
+  #grow-collection-page .grow-links {
+    padding: 2vw 1vw;
+  }
+
+  #add-a-grow {
+    border: .5vw dotted black;
+    padding: 6vw 3vw;
+  }
+
+  #grow-entries-page h2,
+  #add-entry-page h2 {
+    line-height: 5rem;
+    font-size: 6.5rem;
+  }
+
+  #grow-entries-page h4 {
+    line-height: 4rem;
+    font-size: 4rem;
+    padding: 0;
+  }
+
+  #timeline-line {
+    width: 30%;
+  }
+
+  #timeline-dot {
+    width: 2rem;
+    height: 2rem;
+    margin: 2rem auto;
+  }
+
+  #left-side,
+  #right-side {
+    flex-grow: 12;
+  }
+
+  #add-entry {
+    padding: 1rem;
+  }
+
+  .timeline-entry img {
+    height: 4rem;
+    width: 4rem;
+  }
+
+  #view-entry-page h2 {
+    line-height: 6rem;
+    font-size: 7rem;
+  }
+
+  #view-entry-page h3 {
+    font-size: 4.5rem;
+    line-height: 4rem;
+  }
+
+  .entry-date {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+
+  .entry-sub-subheading {
+    padding-top: 2rem;
+  }
+
+  .entry-sub-subheading img {
+    width: 3rem;
+  }
+
+  #view-entry-page main h4 {
+    line-height: 3.5rem;
+    font-size: 4rem;
+  }
+
+  #notes-box {
+    min-height: 8rem;
+  }
+
+  #notes-box-edit {
+    height: 12rem;
+  }
+
+  #exit-edit,
+  #edit-entry {
+    font-size: 2rem;
+  }
+
+  input.strain {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  #first-entry-page a {
+    display: block;
+    padding: 2% 0;
+    cursor: pointer;
+  }
+
+  #add-entry-page h3 {
+    font-size: 4rem;
+  }
+
+  #add-entry-page h4 {
+    font-size: 3rem;
+    line-height: 2.5rem;
+  }
+
+  #water-feed-instruct {
+      margin: 3% auto;
+  }
+
+  #water-feed-instruct img {
+    height: 15rem;
+    width: 15rem;
+    margin: 1rem;
+  }
+
+  #grow-progression {
+    padding: 3rem 0;
+  }
+
+  .nutrient-list {
+    font-size: 2rem;
+  }
+
+  #feed-note .circle-icon {
+    margin: 1.5rem 0rem;
+  }
+
+  #feed-note ul {
+      font-size: 2rem;
+  }
+
+  #add-entry-page textarea {
+    width: 40rem;
+    height: 10rem;
+  }
+
+  .yes-no {
+    padding: 2rem 1rem;
+    width: 9rem;
+  }
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {
+  html {
+    font-size: 18px;
+  }
+
+  #first-entry-page a {
+    display: block;
+    position: relative;
+    margin-left: 25vw;
+    margin-right: 25vw;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  #first-entry-page a img {
+    display: block;
+    width: 50vw;
+    margin: auto;
+    padding: 15% 0;
+  }
+
+  #first-entry-page a h2 {
+    color: white;
+    width: 50vw;
+    background-color: rgba(34, 33, 33, 0.8);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 14%;
+    height: auto;
+    padding: 4.5rem 2rem;
+    margin: auto;
+    visibility: hidden;
+    line-height: 6rem;
+    font-size: 7rem;
+    height: auto;
+
+  }
+
+}
