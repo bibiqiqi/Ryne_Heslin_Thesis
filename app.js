@@ -238,7 +238,6 @@ function moveTocCursor(newChapterId) {
 function makeNewChapter(newChapterId){
   if(global.highContrast) {
     //turn the color scheme back to off
-    // console.log('calling handleHcButtonOff')
     const hCbutton = document.querySelector('#tab-of-contents button');
     handleHcButtonOff(hCbutton);
     handleTextToAesthetic();
