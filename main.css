@@ -47,7 +47,7 @@ ul {
 }
 
 #main-text::-webkit-scrollbar,
-#citations div::-webkit-scrollbar
+#citations div::-webkit-scrollbar {
   width: .7rem;
 }
 
