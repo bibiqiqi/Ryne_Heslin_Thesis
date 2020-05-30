@@ -77,6 +77,19 @@ ul {
   padding-inline-start: 1rem;
 }
 
+#main-bibliography ul {
+  padding-left: 0;
+  text-align: left;
+  padding: 1rem
+}
+
+#main-bibliography ul li {
+  padding-left: 1.5em;
+  text-indent:-1.5em;
+}
+
+
+
 #main-text {
   overflow-x: hidden;
   height: 80%;
@@ -152,7 +165,7 @@ ul {
 
 .toc-title,
 .chapter div:first-child {
-  height: 10vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -470,6 +483,15 @@ ul {
 
 /*Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) {
+  .toc-title,
+  .chapter div:first-child {
+    height: 10vh;
+  }
+
+  .tab {
+    padding-left: 2rem;
+  }
+
   #tab-of-contents,
   #main-text {
     height: 78%
@@ -518,7 +540,7 @@ ul {
   #citations {
     margin: 0;
   }
-  
+
   .right-page-turn,
   .left-page-turn {
     bottom: 4rem
