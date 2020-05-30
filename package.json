@@ -16,6 +16,8 @@
     "url": "https://github.com/bibiqiqi/Ryne_Heslin_Thesis/issues"
   },
   "homepage": "https://github.com/bibiqiqi/Ryne_Heslin_Thesis#readme",
-  "dependencies": {},
+  "dependencies": {
+    "http-server": "^0.12.3"
+  },
   "description": ""
 }
