@@ -47,7 +47,7 @@ ul {
 }
 
 #main-text::-webkit-scrollbar,
-#citations div::-webkit-scrollbar {
+#citations div::-webkit-scrollbar
   width: .7rem;
 }
 
@@ -138,6 +138,8 @@ ul {
   font-size: 1rem;
   cursor: pointer;
   text-align: left;
+  padding-left: 1.5em;
+  text-indent: -2.5em;
 }
 
 #toc-list h3 {
@@ -485,7 +487,7 @@ ul {
 @media (min-width: 768px) {
   .toc-title,
   .chapter div:first-child {
-    height: 12vh;
+    height: 10vh;
   }
 
   .tab {
@@ -502,6 +504,7 @@ ul {
   }
   #citations div {
     height: 20%;
+    padding-top: .5rem;
   }
 
   #tab-of-contents {
@@ -509,7 +512,7 @@ ul {
   }
 
   #toc-list {
-    padding-left: 1rem
+    padding-left: 2rem;
   }
 
   #main-text h1,
@@ -529,16 +532,39 @@ ul {
     height: 100%
   }
 
-  h1 {
+  .toc-title,
+  .chapter div:first-child {
+    height: 12vh;
+  }
+
+  #main-text h1,
+  #tab-of-contents button h1 {
     font-size: 1.75rem !important;
   }
 
-  #citations div {
-    height: 98%;
+  #toc-list {
+    padding-left: 3rem;
+    padding-right: 2rem;
+  }
+
+  #toc-list li {
+    font-size: .85rem
+  }
+
+  #toc-list h3 {
+    font-size: 1rem;
+  }
+
+  .toc-title {
+    font-size: 1.75rem !important;
   }
 
   #citations {
     margin: 0;
+  }
+
+  #citations div {
+    height: 97%
   }
 
   .right-page-turn,
