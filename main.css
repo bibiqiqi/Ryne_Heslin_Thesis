@@ -11,7 +11,7 @@ cite {
 }
 
 h1 {
-  font-size: 1.75rem !important;
+  font-size: 1.25rem !important;
   margin-bottom: 0 !important;
 }
 
@@ -57,11 +57,13 @@ ul {
 
 #main-text p,
 #main-text blockquote {
-  text-align: justify
+  text-align: justify;
+  font-size: 1rem !important;
 }
 
 #citations {
-  height: 100%
+  height: 100%;
+  margin: 0 .7rem 0 .35rem
 }
 
 #citations div {
@@ -81,7 +83,7 @@ ul {
 }
 
 #main-text blockquote {
-  padding: 0 2rem;
+  padding: 0 1rem;
 }
 
 #main-text h2 {
@@ -115,8 +117,8 @@ ul {
 
 #toc-list {
   margin: .7rem .35rem 0 0;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: .7rem;
+  padding-bottom: .7rem;
 }
 
 #toc-list li {
@@ -166,7 +168,7 @@ ul {
 .right-page-turn,
 .left-page-turn {
   width: 100%;
-  bottom: 4rem
+  bottom: 2.5rem
 }
 
 .bibliography ul {
@@ -470,15 +472,31 @@ ul {
 @media (min-width: 768px) {
   #tab-of-contents,
   #main-text {
-    height: 70%
+    height: 78%
   }
 
+  #citations {
+    margin: 0 .7rem 0 0;
+  }
   #citations div {
-    height: 28%;
+    height: 20%;
   }
 
   #tab-of-contents {
     display: block;
+  }
+
+  #toc-list {
+    padding-left: 1rem
+  }
+
+  #main-text h1,
+  #tab-of-contents button h1 {
+    font-size: 2rem !important;
+  }
+
+  .toc-title {
+    font-size: 1.5rem !important;
   }
 }
 
@@ -489,8 +507,20 @@ ul {
     height: 100%
   }
 
+  h1 {
+    font-size: 1.75rem !important;
+  }
+
   #citations div {
     height: 98%;
   }
 
+  #citations {
+    margin: 0;
+  }
+  
+  .right-page-turn,
+  .left-page-turn {
+    bottom: 4rem
+  }
 }
