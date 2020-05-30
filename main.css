@@ -485,7 +485,7 @@ ul {
 @media (min-width: 768px) {
   .toc-title,
   .chapter div:first-child {
-    height: 10vh;
+    height: 12vh;
   }
 
   .tab {
