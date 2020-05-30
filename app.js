@@ -113,6 +113,7 @@ function handlePageTurn(turnElement, pageTurnClass) {
   //console.log('index of current chapter', global.currentChapter, 'is', i);
   const newChapterId = pageTurnClass === 'right-turn' ? chapters[++i] : chapters[--i];
   //console.log('new index is', i, 'and newChapter is', newChapterId);
+  document.getElementById('main-text').scrollTop = 0;
   makeNewChapter(newChapterId);
 }
 
@@ -172,9 +173,6 @@ function removeOldColor() {
     removeClass(document.getElementById('toc-list'), `${global.currentColor}-text` );
     //remove #main-text scroll color
     removeClass(document.getElementById('main-text'), `${global.currentColor}-scroll` );
-    //remove #citations scroll color
-    removeClass(document.getElementById('citations'), `${global.currentColor}-scroll` );
-    //remove HC button text color
     removeClass(document.querySelector('#tab-of-contents button'), `${global.currentColor}-text`);
     //remove HC button border color
     removeClass(document.querySelector('#tab-of-contents button'), `${global.currentColor}-border`);
@@ -195,8 +193,6 @@ function addNewColor(newChapterId) {
     addClass(document.getElementById('toc-list'), `${newColor}-text`);
     //add new #main-text scroll color
     addClass(document.getElementById('main-text'), `${newColor}-scroll`);
-    //add new #citations scroll color
-    addClass(document.getElementById('citations'), `${newColor}-scroll`);
     //add HC button text color
     addClass(document.querySelector('#tab-of-contents button'), `${newColor}-text`);
     //add HC button border color
@@ -245,6 +241,7 @@ function makeNewChapter(newChapterId){
     // console.log('calling handleHcButtonOff')
     const hCbutton = document.querySelector('#tab-of-contents button');
     handleHcButtonOff(hCbutton);
+    handleTextToAesthetic();
   }
   //make sure these all resolve before calling main
   return Promise.all(
